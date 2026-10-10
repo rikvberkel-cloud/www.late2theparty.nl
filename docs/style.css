@@ -315,6 +315,40 @@ summary.ae-faq__q::-webkit-details-marker { display: none; }
 
 .ae-rubric__body .ae-skill { margin: var(--space-6) auto; }
 
+/* Kaart voor een plaat of podcast: hoes, titel, ondertitel */
+.media-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+  margin: 0 0 var(--space-5);
+  padding: var(--space-4);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.media-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.media-card__title {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-quote);
+  line-height: var(--lh-tight);
+  color: var(--text-main);
+}
+
+.media-card__sub {
+  margin: 0;
+  color: var(--text-muted);
+}
+
 .figure { margin: var(--space-6) 0; }
 .figure .ae-photo img { width: 100%; height: auto; }
 
