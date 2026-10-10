@@ -270,7 +270,7 @@ summary.ae-faq__q::-webkit-details-marker { display: none; }
   transition: color var(--dur-base) var(--ease-out);
 }
 
-.nb-item__link:hover .nb-item__title { color: var(--neon-cyan); }
+a.nb-item__link:hover .nb-item__title { color: var(--neon-cyan); }
 
 .nb-item__teaser {
   margin: 0;
@@ -278,6 +278,9 @@ summary.ae-faq__q::-webkit-details-marker { display: none; }
 }
 
 .nb-empty { margin-top: var(--space-5); }
+
+/* Homepage: lijsten met bangers en collaborators */
+.bangers-playlist { margin-top: var(--space-6); }
 
 /* ---------- Editie ---------- */
 .edition__back {
