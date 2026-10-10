@@ -283,6 +283,39 @@ a.nb-item__link:hover .nb-item__title { color: var(--neon-cyan); }
 .bangers-playlist { margin-top: var(--space-6); }
 
 /* ---------- Editie ---------- */
+/* Zoals in de mail: cyaan lijnen rond de tagline en rond elke rubriekkop */
+.nb-masthead .ae-masthead__rule { display: none; }
+
+.nb-masthead .ae-masthead__line,
+.edition .ae-rubric__label {
+  position: relative;
+  padding: var(--space-4) 0;
+}
+
+.nb-masthead .ae-masthead__line { align-self: stretch; max-width: none; }
+
+.nb-masthead .ae-masthead__line::before,
+.nb-masthead .ae-masthead__line::after,
+.edition .ae-rubric__label::before,
+.edition .ae-rubric__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.nb-masthead .ae-masthead__line::before,
+.edition .ae-rubric__label::before { top: 0; }
+
+.nb-masthead .ae-masthead__line::after,
+.edition .ae-rubric__label::after { bottom: 0; }
+
+/* De cyaan lijnen scheiden de rubrieken al */
+.edition .ae-rubric { border-bottom: 0; }
+
 .edition__back {
   margin-bottom: var(--space-6);
   font-size: var(--fs-small);
