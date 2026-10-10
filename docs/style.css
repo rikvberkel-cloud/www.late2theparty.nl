@@ -317,6 +317,7 @@ summary.ae-faq__q::-webkit-details-marker { display: none; }
 
 .figure { margin: var(--space-6) 0; }
 .figure .ae-photo img { width: 100%; height: auto; }
+.figure .ae-photo video { display: block; width: 100%; height: auto; }
 
 /* ---------- Privacy ---------- */
 .prose h2 {
