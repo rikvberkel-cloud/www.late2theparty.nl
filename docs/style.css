@@ -366,3 +366,13 @@ a.nb-item__link:hover .nb-item__title { color: var(--neon-cyan); }
 }
 
 .prose .lead { margin-bottom: var(--space-6); }
+
+/* Ambassadeur van Sjoelclub Delfshaven: hun pixel-sjoelschijf als mini-icoon in de tekst.
+   Kleuren van het icoon komen uit hun logo, de link volgt de eigen stijl. */
+.sjoel-icoon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1em;
+  margin-right: .35em;
+  vertical-align: -.12em;
+}
