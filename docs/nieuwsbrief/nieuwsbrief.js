@@ -11,6 +11,16 @@
 
   if (!knoppen.length || !items.length) return;
 
+  /* Een filter zonder editie blijft verborgen tot er een editie met die tag is */
+  knoppen.forEach(function (knop) {
+    var tag = knop.getAttribute('data-tag');
+    if (tag === 'alles') return;
+    var heeftEditie = Array.prototype.some.call(items, function (item) {
+      return (item.getAttribute('data-tags') || '').split(' ').indexOf(tag) !== -1;
+    });
+    knop.hidden = !heeftEditie;
+  });
+
   function filter(tag) {
     var zichtbaar = 0;
 

@@ -118,7 +118,9 @@
   });
 
   /* ------------------------------------------
-     5. SPOTIFY: desktop meteen, mobiel na tik
+     5. SPOTIFY: laadt pas na een klik
+     Zo zet Spotify geen cookies voordat iemand een lijst aandrukt
+     (zie de privacyverklaring).
      ------------------------------------------ */
   function mountSpotify(box, autoplay) {
     if (!box || box.classList.contains('is-loaded')) return;
@@ -138,24 +140,10 @@
     box.classList.add('is-loaded');
   }
 
-  var compact = window.matchMedia('(max-width: 640px)');
-
-  function wireSpotify() {
-    document.querySelectorAll('.listen-card[data-spotify]').forEach(function (box) {
-      if (!compact.matches) {
-        mountSpotify(box);
-        return;
-      }
-      var knop = box.querySelector('.listen-card__play');
-      if (knop && !knop.getAttribute('data-wired')) {
-        knop.setAttribute('data-wired', '1');
-        knop.addEventListener('click', function () { mountSpotify(box, true); });
-      }
-    });
-  }
-
-  wireSpotify();
-  if (compact.addEventListener) compact.addEventListener('change', wireSpotify);
+  document.querySelectorAll('.listen-card[data-spotify]').forEach(function (box) {
+    var knop = box.querySelector('.listen-card__play');
+    if (knop) knop.addEventListener('click', function () { mountSpotify(box, true); });
+  });
 
   /* ------------------------------------------
      6. INSCHRIJVEN
