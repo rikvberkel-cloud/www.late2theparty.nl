@@ -95,6 +95,9 @@ a.ae-pill:hover { background: var(--neon-yellow-a10); color: var(--neon-yellow);
 
 .split__photo { aspect-ratio: 4 / 5; }
 
+/* Een picture rond een foto telt niet mee in de opmaak: de img vult het kader. */
+.ae-photo picture { display: contents; }
+
 @media (max-width: 680px) {
   .split {
     grid-template-columns: minmax(0, 1fr);

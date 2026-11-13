@@ -92,7 +92,11 @@
     <div class="split">
       <!-- FOTO: hero.jpg staat in docs/ (zelfde bestandsnaam houden) -->
       <div class="ae-photo ae-photo--rim ae-photo--maan split__photo">
-        <img src="hero.jpg" alt="Portretfoto van all-electric" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="hero-640.avif 640w, hero-1200.avif 1200w" sizes="(max-width: 680px) 320px, 280px">
+          <source type="image/webp" srcset="hero-640.webp 640w, hero-1200.webp 1200w" sizes="(max-width: 680px) 320px, 280px">
+          <img src="hero-640.jpg" srcset="hero-640.jpg 640w, hero.jpg 1200w" sizes="(max-width: 680px) 320px, 280px" alt="Portretfoto van all-electric" width="1200" height="1600" loading="eager" fetchpriority="high">
+        </picture>
       </div>
 
       <div>
@@ -138,7 +142,11 @@
 
     <div class="nb-promo">
       <a class="ae-photo nb-promo__beeld" href="nieuwsbrief/" aria-label="Naar het nieuwsbriefarchief">
-        <img src="collage.jpg" alt="all-electric achter de decks, drie foto's in duotoon" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="collage-640.avif 640w, collage-1246.avif 1246w" sizes="(max-width: 700px) 100vw, 470px">
+          <source type="image/webp" srcset="collage-640.webp 640w, collage-1246.webp 1246w" sizes="(max-width: 700px) 100vw, 470px">
+          <img src="collage-640.jpg" srcset="collage-640.jpg 640w, collage.jpg 1246w" sizes="(max-width: 700px) 100vw, 470px" alt="all-electric achter de decks, drie foto's in duotoon" width="1246" height="1442" loading="lazy">
+        </picture>
       </a>
 
       <div>
