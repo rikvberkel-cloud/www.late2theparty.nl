@@ -2,6 +2,8 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; media-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
@@ -21,6 +23,8 @@
   <meta name="twitter:image" content="https://www.late2theparty.nl/collage.jpg">
   <meta name="theme-color" content="#08080a">
 
+  <link rel="preload" href="../../fonts/archivo-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../all-electric.css">
   <link rel="stylesheet" href="../../style.css">
 </head>
@@ -28,7 +32,7 @@
   <a class="skip-link ae-btn ae-btn--outline ae-btn--sm" href="#hoofdinhoud">Naar inhoud</a>
 
   <nav class="ae-nav ae-nav--sticky" aria-label="Hoofdmenu">
-    <a class="ae-nav__mark" href="../../">all-electric</a>
+    <a class="ae-nav__mark" href="../../">DJ All-electric</a>
     <ul class="ae-nav__links">
       <li><a class="ae-nav__link" href="../../#over">Over</a></li>
       <li><a class="ae-nav__link" href="../" aria-current="page">Nieuwsbrief</a></li>
@@ -46,7 +50,7 @@
       <span class="ae-masthead__meta">#01 &middot; augustus 2026 &middot; webversie</span>
       <p class="ae-masthead__title">Late 2 The Party</p>
       <span class="ae-masthead__rule" aria-hidden="true"></span>
-      <p class="ae-masthead__line">De nieuwsbrief van all-electric &middot; Plaatjes leren draaien &middot; Lifestyle &middot; Kunst &middot; Nachtcultuur &middot; Mode</p>
+      <p class="ae-masthead__line">De nieuwsbrief van DJ All-electric &middot; Plaatjes leren draaien &middot; Lifestyle &middot; Kunst &middot; Nachtcultuur &middot; Mode</p>
     </div>
   </header>
 
@@ -83,17 +87,17 @@
 
         <figure class="figure">
           <div class="ae-photo">
-            <img src="../../collage.jpg" alt="DJ Rikkert010 achter de decks in Café Soif, drie foto's in duotoon" loading="lazy">
+            <img src="../../collage.jpg" width="1000" height="1157" alt="DJ Rikkert010 achter de decks in Café Soif, drie foto's in duotoon" loading="lazy">
           </div>
           <figcaption class="ae-photo__caption">Rikkert010, 2026, 3 foto's, Power Prompt en Claude Opus 5 (One-Shot).</figcaption>
         </figure>
 
         <p class="edition__kicker">De banger van deze editie</p>
-        <h3><a href="https://open.spotify.com/playlist/38ZxwIsjA0LoZfAJpw7fxr" target="_blank" rel="noopener">GIØ &middot; Sistem Error</a></h3>
+        <h3><a href="https://open.spotify.com/playlist/38ZxwIsjA0LoZfAJpw7fxr" target="_blank" rel="noopener noreferrer">GIØ &middot; Sistem Error</a></h3>
 
         <p><strong>Mening.</strong> Piano meets vlotte beat. Kan niet anders zeggen: banger.</p>
         <p class="edition__stars" aria-label="4 uit 5 sterren">⭐⭐⭐⭐</p>
-        <p><strong>Stukje informatie.</strong> Voor wie GIØ niet kent: DJ en Producer uit het zonovergoten Italiaanse Sicilië. Het label en collectief dragen de typerende naam '240 KM/H', ver boven de maximale snelheid op de Nederlandse snelweg van 100 KM/H. Meer info en tracks vind je <a href="https://soundcloud.com/giowaw" target="_blank" rel="noopener">op zijn SoundCloud</a>. De plaat zelf staat in de <a href="https://open.spotify.com/playlist/38ZxwIsjA0LoZfAJpw7fxr" target="_blank" rel="noopener">nieuwsbrief-playlist op Spotify</a>.</p>
+        <p><strong>Stukje informatie.</strong> Voor wie GIØ niet kent: DJ en Producer uit het zonovergoten Italiaanse Sicilië. Het label en collectief dragen de typerende naam '240 KM/H', ver boven de maximale snelheid op de Nederlandse snelweg van 100 KM/H. Meer info en tracks vind je <a href="https://soundcloud.com/giowaw" target="_blank" rel="noopener noreferrer">op zijn SoundCloud</a>. De plaat zelf staat in de <a href="https://open.spotify.com/playlist/38ZxwIsjA0LoZfAJpw7fxr" target="_blank" rel="noopener noreferrer">nieuwsbrief-playlist op Spotify</a>.</p>
         <div class="listen-card" data-spotify="https://open.spotify.com/embed/track/5fKil1HCUAk45V4ExBdMEV?utm_source=generator&amp;theme=0" data-title="GIØ · Sistem Error">
           <p class="listen-card__label">GIØ &middot; Sistem Error</p>
           <button type="button" class="ae-btn ae-btn--outline ae-btn--sm listen-card__play">Luister op Spotify</button>
@@ -108,7 +112,7 @@
         <h3>Issue tree &middot; welke voorwaarden moeten in place zijn om succesvol DJ te worden?</h3>
 
         <p>Een issue tree is zowel simpel als ontzettend krachtig. Bovenaan zet je wat je wil bereiken. Daaronder de voorwaarden die daarvoor moeten kloppen. Per voorwaarde werk je met een stoplicht: groen is op orde, rood blokkeert.</p>
-        <p>Wil je er meer over weten, lees dan <a href="https://www.craftingcases.com/issue-tree-guide/" target="_blank" rel="noopener">Issue Trees: The Definitive Guide</a> van Crafting Cases.</p>
+        <p>Wil je er meer over weten, lees dan <a href="https://www.craftingcases.com/issue-tree-guide/" target="_blank" rel="noopener noreferrer">Issue Trees: The Definitive Guide</a> van Crafting Cases.</p>
         <p>In mijn geval is het centrale issue natuurlijk techniek.</p>
 
         <!-- Zelfde schema als op de homepage, hier zonder animatie -->
@@ -139,7 +143,7 @@
         <p>De truc is wat je ermee doet. Groen moet je met rust laten, hooguit wat onderhoud. Dus niet laten afleiden door side projects zoals een nieuwsbrief, een website vibecoden of je haar blonderen.</p>
 
         <h3>Dus wat heb ik gedaan en kan ik al wat</h3>
-        <p>De aandacht die rood vraagt heb ik omgezet naar voltooien van de <a href="https://wearecrossfader.co.uk/ddj-flx4-course/" target="_blank" rel="noopener">Pioneer DJ DDJ-FLX4 Beginner Course</a> van We Are Crossfader, YouTube shorts scrollen van <a href="https://www.youtube.com/@DJPhilHarris/shorts" target="_blank" rel="noopener">DJ Phil Harris</a>, een aantal lessen bij deep house DJ en trainer <a href="https://www.instagram.com/___ximar/" target="_blank" rel="noopener">Ximar</a> volgen én vooral thuis beetje pielen.</p>
+        <p>De aandacht die rood vraagt heb ik omgezet naar voltooien van de <a href="https://wearecrossfader.co.uk/ddj-flx4-course/" target="_blank" rel="noopener noreferrer">Pioneer DJ DDJ-FLX4 Beginner Course</a> van We Are Crossfader, YouTube shorts scrollen van <a href="https://www.youtube.com/@DJPhilHarris/shorts" target="_blank" rel="noopener noreferrer">DJ Phil Harris</a>, een aantal lessen bij deep house DJ en trainer <a href="https://www.instagram.com/___ximar/" target="_blank" rel="noopener noreferrer">Ximar</a> volgen én vooral thuis beetje pielen.</p>
         <p>Eindresultaat: ik kan (meestal) zonder al te grote ongelukken van track A naar B.</p>
       </div>
     </section>
@@ -154,12 +158,12 @@
 
         <figure class="figure">
           <div class="ae-photo ae-photo--rim">
-            <img src="../rousseau-de-droom.jpg" alt="De droom van Henri Rousseau, een junglelandschap met liggende figuur, olieverf op doek uit 1910" loading="lazy">
+            <img src="../rousseau-de-droom.jpg" width="1600" height="1080" alt="De droom van Henri Rousseau, een junglelandschap met liggende figuur, olieverf op doek uit 1910" loading="lazy">
           </div>
-          <figcaption class="ae-photo__caption">Henri Rousseau, <a href="https://www.moma.org/collection/works/79277" target="_blank" rel="noopener">De droom</a>, 1910, olieverf op doek, Museum of Modern Art, New York. Beeld via Wikimedia Commons, publiek domein.</figcaption>
+          <figcaption class="ae-photo__caption">Henri Rousseau, <a href="https://www.moma.org/collection/works/79277" target="_blank" rel="noopener noreferrer">De droom</a>, 1910, olieverf op doek, Museum of Modern Art, New York. Beeld via Wikimedia Commons, publiek domein.</figcaption>
         </figure>
 
-        <p>In het begin werd hij uitgelachen vanwege zijn ogenschijnlijk 'simpele' manier van schilderen. Later omarmden de wereldberoemde modernisten Picasso en Kandinsky diezelfde "childlike simplicity" als primitivisme (<a href="https://www.theartstory.org/artist/rousseau-henri/" target="_blank" rel="noopener">The Art Story</a>).</p>
+        <p>In het begin werd hij uitgelachen vanwege zijn ogenschijnlijk 'simpele' manier van schilderen. Later omarmden de wereldberoemde modernisten Picasso en Kandinsky diezelfde "childlike simplicity" als primitivisme (<a href="https://www.theartstory.org/artist/rousseau-henri/" target="_blank" rel="noopener noreferrer">The Art Story</a>).</p>
         <p>Simpel schilderen blijkt toch niet zo eenvoudig. Net als simpel draaien overigens.</p>
       </div>
     </section>
@@ -185,7 +189,7 @@
 
   <footer class="ae-footer">
     <div class="ae-footer__inner">
-      <span>&copy; all-electric, Rotterdam</span>
+      <span>&copy; DJ All-electric, Rotterdam</span>
       <ul class="ae-footer__links">
         <li><a href="../">Late 2 The Party</a></li>
         <li><a href="../../privacy/">Privacy</a></li>
@@ -193,6 +197,6 @@
     </div>
   </footer>
 
-  <script src="../../main.js"></script>
+  <script src="../../main.js" defer></script>
 </body>
 </html>

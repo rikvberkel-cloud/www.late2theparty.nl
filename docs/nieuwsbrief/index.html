@@ -2,12 +2,14 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; style-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://*.mailerlite.com https://*.mlcdn.com; font-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; connect-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; frame-src https://open.spotify.com https://*.mailerlite.com; media-src 'self'; form-action 'self' https://*.mailerlite.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
 
-  <title>Late 2 The Party, de nieuwsbrief · all-electric</title>
-  <meta name="description" content="Archief van Late 2 The Party, de maandelijkse nieuwsbrief van all-electric over leren draaien, lifestyle, kunst, nachtcultuur en mode.">
+  <title>Late 2 The Party, de nieuwsbrief · DJ All-electric</title>
+  <meta name="description" content="Archief van Late 2 The Party, de maandelijkse nieuwsbrief van DJ All-electric over leren draaien, lifestyle, kunst, nachtcultuur en mode.">
   <link rel="canonical" href="https://www.late2theparty.nl/nieuwsbrief/">
   <meta property="og:title" content="Late 2 The Party, de nieuwsbrief">
   <meta property="og:description" content="Plaatjes leren draaien, lifestyle, kunst, nachtcultuur en mode.">
@@ -21,6 +23,8 @@
   <meta name="twitter:image" content="https://www.late2theparty.nl/collage.jpg">
   <meta name="theme-color" content="#08080a">
 
+  <link rel="preload" href="../fonts/archivo-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../all-electric.css">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -28,7 +32,7 @@
   <a class="skip-link ae-btn ae-btn--outline ae-btn--sm" href="#hoofdinhoud">Naar inhoud</a>
 
   <nav class="ae-nav ae-nav--sticky" aria-label="Hoofdmenu">
-    <a class="ae-nav__mark" href="../">all-electric</a>
+    <a class="ae-nav__mark" href="../">DJ All-electric</a>
     <ul class="ae-nav__links">
       <li><a class="ae-nav__link" href="../#over">Over</a></li>
       <li><a class="ae-nav__link" href="./" aria-current="page">Nieuwsbrief</a></li>
@@ -45,7 +49,7 @@
     <div class="ae-masthead__inner">
       <h1 class="ae-masthead__title">Late 2 The Party</h1>
       <span class="ae-masthead__rule" aria-hidden="true"></span>
-      <p class="ae-masthead__line">De nieuwsbrief van all-electric &middot; Plaatjes leren draaien &middot; Lifestyle &middot; Kunst &middot; Nachtcultuur &middot; Mode</p>
+      <p class="ae-masthead__line">De nieuwsbrief van DJ All-electric &middot; Plaatjes leren draaien &middot; Lifestyle &middot; Kunst &middot; Nachtcultuur &middot; Mode</p>
     </div>
   </header>
 
@@ -114,14 +118,14 @@
 
   <footer class="ae-footer">
     <div class="ae-footer__inner">
-      <span>&copy; all-electric, Rotterdam &middot; Late 2 The Party</span>
+      <span>&copy; DJ All-electric, Rotterdam &middot; Late 2 The Party</span>
       <ul class="ae-footer__links">
         <li><a href="../privacy/">Privacy</a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="../main.js"></script>
-  <script src="nieuwsbrief.js"></script>
+  <script src="../main.js" defer></script>
+  <script src="nieuwsbrief.js" defer></script>
 </body>
 </html>

@@ -2,55 +2,180 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; style-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://*.mailerlite.com https://*.mlcdn.com; font-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; connect-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; frame-src https://open.spotify.com https://*.mailerlite.com; media-src 'self'; form-action 'self' https://*.mailerlite.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon (emoji, geen extra bestand nodig) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
 
   <!-- SEO -->
-  <title>all-electric · DJ uit Rotterdam</title>
-  <meta name="description" content="all-electric, DJ uit Rotterdam. UK Garage, Italo Disco, 90's bangers. Nieuwsbrief: Late 2 The Party.">
+  <title>DJ All-electric · DJ uit Rotterdam · UK garage, Italo disco en 90's bangers</title>
+  <meta name="description" content="DJ All-electric, DJ uit Rotterdam. UK garage, Italo disco en 90's bangers. Bekijk de agenda, boek via mail of lees de nieuwsbrief Late 2 The Party.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="all-electric · DJ uit Rotterdam">
-  <meta property="og:description" content="DJ uit Rotterdam. Nieuwsbrief: Late 2 The Party.">
+  <meta property="og:title" content="DJ All-electric · DJ uit Rotterdam">
+  <meta property="og:description" content="UK garage, Italo disco en 90's bangers. Agenda, boeken en de nieuwsbrief Late 2 The Party.">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DJ All-electric">
+  <meta property="og:locale" content="nl_NL">
   <link rel="canonical" href="https://www.late2theparty.nl/">
   <meta property="og:url" content="https://www.late2theparty.nl/">
-  <meta property="og:image" content="https://www.late2theparty.nl/hero.jpg">
+  <meta property="og:image" content="https://www.late2theparty.nl/deelbeeld.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="all-electric · DJ uit Rotterdam">
-  <meta name="twitter:description" content="DJ uit Rotterdam. Nieuwsbrief: Late 2 The Party.">
-  <meta name="twitter:image" content="https://www.late2theparty.nl/hero.jpg">
+  <meta name="twitter:title" content="DJ All-electric · DJ uit Rotterdam">
+  <meta name="twitter:description" content="UK garage, Italo disco en 90's bangers. Agenda, boeken en de nieuwsbrief Late 2 The Party.">
+  <meta name="twitter:image" content="https://www.late2theparty.nl/deelbeeld.jpg">
 
   <meta name="theme-color" content="#08080a">
 
   <!-- Design system (letterlijk de export) en daarna de opmaak van deze site -->
+  <link rel="preload" href="fonts/archivo-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="all-electric.css">
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "all-electric",
-    "description": "DJ uit Rotterdam. UK Garage, Italo Disco en 90's bangers.",
-    "genre": ["UK Garage", "Italo Disco", "90s dance"],
-    "url": "https://www.late2theparty.nl/",
-    "image": "https://www.late2theparty.nl/hero.jpg",
-    "email": "hallo@late2theparty.nl",
-    "foundingLocation": "Rotterdam, Nederland"
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.late2theparty.nl/#site",
+      "url": "https://www.late2theparty.nl/",
+      "name": "DJ All-electric",
+      "alternateName": "Late 2 The Party",
+      "inLanguage": "nl"
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": "https://www.late2theparty.nl/#dj",
+      "name": "DJ All-electric",
+      "alternateName": "All-electric",
+      "description": "DJ uit Rotterdam. UK garage, Italo disco en 90's bangers.",
+      "genre": [
+        "UK Garage",
+        "Italo Disco",
+        "90s dance"
+      ],
+      "url": "https://www.late2theparty.nl/",
+      "image": "https://www.late2theparty.nl/hero.jpg",
+      "email": "hallo@late2theparty.nl",
+      "foundingLocation": {
+        "@type": "City",
+        "name": "Rotterdam"
+      },
+      "areaServed": "Rotterdam"
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Oliebollen & Bouncers",
+      "startDate": "2026-12-31",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Rotterdam",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rotterdam",
+          "addressCountry": "NL"
+        }
+      },
+      "performer": {
+        "@id": "https://www.late2theparty.nl/#dj"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Tunes 4 my boy",
+      "startDate": "2026-10-24",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Rotterdam",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rotterdam",
+          "addressCountry": "NL"
+        }
+      },
+      "performer": {
+        "@id": "https://www.late2theparty.nl/#dj"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Dubble Bubble Party",
+      "startDate": "2026-10-17",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Rotterdam",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rotterdam",
+          "addressCountry": "NL"
+        }
+      },
+      "performer": {
+        "@id": "https://www.late2theparty.nl/#dj"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "TELLES B-DAY",
+      "startDate": "2026-08-15",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Café Soif",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rotterdam",
+          "addressCountry": "NL"
+        }
+      },
+      "performer": {
+        "@id": "https://www.late2theparty.nl/#dj"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Pride Company Party",
+      "startDate": "2026-07-31",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Amsterdam",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Amsterdam",
+          "addressCountry": "NL"
+        }
+      },
+      "performer": {
+        "@id": "https://www.late2theparty.nl/#dj"
+      }
+    }
+  ]
+}
   </script>
 </head>
-<body>
+<body class="home">
   <a class="skip-link ae-btn ae-btn--outline ae-btn--sm" href="#hoofdinhoud">Naar inhoud</a>
 
   <nav class="ae-nav ae-nav--sticky" aria-label="Hoofdmenu">
-    <a class="ae-nav__mark" href="#hero">all-electric</a>
+    <a class="ae-nav__mark" href="#hero">DJ All-electric</a>
     <ul class="ae-nav__links">
       <li><a class="ae-nav__link" href="#over">Over</a></li>
       <li><a class="ae-nav__link" href="#nieuwsbrief">Nieuwsbrief</a></li>
@@ -66,16 +191,20 @@
   <!-- HERO -->
   <section class="ae-hero" id="hero">
     <div class="ae-hero__inner">
-      <h1 class="ae-hero__title">all-electric</h1>
+      <h1 class="ae-hero__title">DJ All-electric</h1>
+      <p class="ae-hero__intro">DJ uit Rotterdam. UK garage, Italo disco, 90's bangers en af en toe een zaag.</p>
 
       <div class="ae-pills">
-        <a class="ae-pill" href="https://open.spotify.com/playlist/3SSnkNHaZYFEnFsS2uNzvc?si=Rkkg8hDzQoSK9qMRm84tKg" target="_blank" rel="noopener">UK in je Garage</a>
-        <a class="ae-pill" href="https://open.spotify.com/playlist/0wihgNsvUCuYe4vIcIEJX1?si=40QB4XUaSfa1ktWyz97FcA&amp;pi=Adpx3Pd0QFGsA" target="_blank" rel="noopener">Italo Disco Gezello</a>
-        <a class="ae-pill" href="https://open.spotify.com/playlist/6vOpbanOj8kMaIDSkkobG8?si=ckpwqJuDSN2oO83r56tTGg" target="_blank" rel="noopener">90' Bangers</a>
-        <a class="ae-pill" href="https://open.spotify.com/playlist/5kQzJcHHc57Rl9Vzh4SRj6?si=ad35b520052c4538" target="_blank" rel="noopener">Beukers &amp; zagers</a>
+        <a class="ae-pill" href="https://open.spotify.com/playlist/3SSnkNHaZYFEnFsS2uNzvc?si=Rkkg8hDzQoSK9qMRm84tKg" target="_blank" rel="noopener noreferrer">UK in je Garage</a>
+        <a class="ae-pill" href="https://open.spotify.com/playlist/0wihgNsvUCuYe4vIcIEJX1?si=40QB4XUaSfa1ktWyz97FcA&amp;pi=Adpx3Pd0QFGsA" target="_blank" rel="noopener noreferrer">Italo Disco Gezello</a>
+        <a class="ae-pill" href="https://open.spotify.com/playlist/6vOpbanOj8kMaIDSkkobG8?si=ckpwqJuDSN2oO83r56tTGg" target="_blank" rel="noopener noreferrer">90' Bangers</a>
+        <a class="ae-pill" href="https://open.spotify.com/playlist/5kQzJcHHc57Rl9Vzh4SRj6?si=ad35b520052c4538" target="_blank" rel="noopener noreferrer">Beukers &amp; zagers</a>
       </div>
 
-      <a class="ae-btn ae-btn--outline" href="#aanmelden">Ontvang de nieuwsbrief</a>
+      <p class="actions hero-actions">
+        <a class="ae-btn ae-btn--primary" href="#contact">Boek</a>
+        <a class="ae-btn ae-btn--outline" href="#aanmelden">Ontvang de nieuwsbrief</a>
+      </p>
 
       <!-- Eerstvolgend optreden: main.js vult dit uit de eerste rij onder Komend in de agenda -->
       <a class="ae-hero__next" id="heroNext" href="#agenda" hidden></a>
@@ -83,8 +212,8 @@
   </section>
 
   <!-- OVER MIJ -->
-  <section class="page-section" id="over">
-    <div class="ae-heading">
+  <section class="page-section page-section--band" id="over">
+    <div class="ae-heading" data-label="Over">
       <h2 class="ae-heading__title">Over mij</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
@@ -92,7 +221,7 @@
     <div class="split">
       <!-- FOTO: hero.jpg staat in docs/ (zelfde bestandsnaam houden) -->
       <div class="ae-photo ae-photo--rim ae-photo--maan split__photo">
-        <img src="hero.jpg" alt="Portretfoto van all-electric" loading="lazy">
+        <img src="hero.jpg" width="639" height="853" alt="Portretfoto van DJ All-electric" loading="lazy">
       </div>
 
       <div>
@@ -130,19 +259,19 @@
 
   <!-- NIEUWSBRIEF, LATE 2 THE PARTY -->
   <section class="page-section page-section--media-end" id="nieuwsbrief">
-    <div class="ae-heading">
+    <div class="ae-heading" data-label="Nieuwsbrief">
       <h2 class="ae-heading__title">Late 2 The Party</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
-    <p class="muted">De nieuwsbrief van all-electric &middot; Plaatjes leren draaien &middot; Lifestyle &middot; Kunst &middot; Nachtcultuur &middot; Mode</p>
+    <p class="muted">De nieuwsbrief van DJ All-electric &middot; Plaatjes leren draaien &middot; Lifestyle &middot; Kunst &middot; Nachtcultuur &middot; Mode</p>
 
     <div class="nb-promo">
       <a class="ae-photo nb-promo__beeld" href="nieuwsbrief/" aria-label="Naar het nieuwsbriefarchief">
-        <img src="collage.jpg" alt="all-electric achter de decks, drie foto's in duotoon" loading="lazy">
+        <img src="collage.jpg" width="1000" height="1157" alt="DJ All-electric achter de decks, drie foto's in duotoon" loading="lazy">
       </a>
 
       <div>
-        <p>Blijf op de hoogte, volg de ontwikkeling achter de decks, en laat je meenemen in plaatjes, zijstraatjes en praatjes.</p>
+        <p>Blijf op de hoogte, volg de ontwikkeling achter de decks, en laat je meenemen in plaatjes, zijstraatjes en praatjes. Eén mail per maand.</p>
         <div class="ae-formpanel" id="aanmelden">
           <div class="ml-embedded" data-form="aK1pC9"></div>
         </div>
@@ -153,22 +282,9 @@
     </div>
   </section>
 
-  <!-- ROTTERDAM -->
-  <section class="page-section" id="rotterdam">
-    <div class="ae-heading">
-      <h2 class="ae-heading__title">Rotterdam</h2>
-      <span class="ae-heading__rule" aria-hidden="true"></span>
-    </div>
-    <p class="muted">Based in Schiebroek maar flexibel vanwege het bezit van een gezinsauto en bakfiets. Ambassadeur van <a href="https://sjoelclubdelfshaven.nl/" target="_blank" rel="noopener"><svg class="sjoel-icoon" viewBox="0 0 12 10" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="8" height="1" fill="#a0734a"/><rect x="0" y="1" width="12" height="1" fill="#a0734a"/><rect x="0" y="2" width="12" height="1" fill="#a0734a"/><rect x="0" y="3" width="3" height="1" fill="#a0734a"/><rect x="3" y="3" width="2" height="1" fill="#221d18"/><rect x="5" y="3" width="2" height="1" fill="#a0734a"/><rect x="7" y="3" width="2" height="1" fill="#221d18"/><rect x="9" y="3" width="3" height="1" fill="#a0734a"/><rect x="0" y="4" width="3" height="1" fill="#a0734a"/><rect x="3" y="4" width="2" height="1" fill="#221d18"/><rect x="5" y="4" width="2" height="1" fill="#a0734a"/><rect x="7" y="4" width="2" height="1" fill="#221d18"/><rect x="9" y="4" width="3" height="1" fill="#a0734a"/><rect x="0" y="5" width="12" height="1" fill="#a0734a"/><rect x="0" y="6" width="3" height="1" fill="#a0734a"/><rect x="3" y="6" width="6" height="1" fill="#221d18"/><rect x="9" y="6" width="3" height="1" fill="#a0734a"/><rect x="2" y="7" width="1" height="1" fill="#a0734a"/><rect x="3" y="7" width="2" height="1" fill="#221d18"/><rect x="5" y="7" width="2" height="1" fill="#efe4d3"/><rect x="7" y="7" width="2" height="1" fill="#221d18"/><rect x="9" y="7" width="1" height="1" fill="#a0734a"/><rect x="3" y="8" width="1" height="1" fill="#221d18"/><rect x="4" y="8" width="4" height="1" fill="#efe4d3"/><rect x="8" y="8" width="1" height="1" fill="#221d18"/><rect x="3" y="9" width="1" height="1" fill="#221d18"/><rect x="4" y="9" width="4" height="1" fill="#efe4d3"/><rect x="8" y="9" width="1" height="1" fill="#221d18"/></svg>Sjoelclub Delfshaven</a>.</p>
-    <blockquote class="ae-quote">
-      <p class="ae-quote__text">Rotterdam, Schiedam, Vlaardingen, Maassluis.<br>Hoekie om, trappie af, gekkenhuis.</p>
-      <cite class="ae-quote__source">Jules Deelder</cite>
-    </blockquote>
-  </section>
-
   <!-- AGENDA -->
-  <section class="page-section" id="agenda">
-    <div class="ae-heading">
+  <section class="page-section page-section--band" id="agenda">
+    <div class="ae-heading" data-label="Agenda">
       <h2 class="ae-heading__title">Agenda</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
@@ -184,21 +300,12 @@
       <!--
         NIEUWE DATUM: kopieer een <li> naar het juiste paneel.
         datum (DD-MM) | naam van het optreden | vlag + plaats
-        De bovenste rij onder Komend verschijnt ook in de hero.
+        data-datum is de volledige datum (JJJJ-MM-DD). Na die dag zet main.js
+        de rij vanzelf onder Geweest. De eerste rij onder Komend verschijnt in de hero.
       -->
       <div class="agenda-paneel" id="paneel-komend" role="tabpanel" aria-labelledby="tab-komend">
         <ul class="ae-agenda__list">
-          <li class="ae-agenda__row">
-            <span class="ae-agenda__date">17-10</span>
-            <span class="ae-agenda__name">Dubble Bubble Party &middot; B2B met piDJon</span>
-            <span class="ae-agenda__loc"><span aria-hidden="true">🇳🇱</span><span>Rotterdam</span></span>
-          </li>
-          <li class="ae-agenda__row">
-            <span class="ae-agenda__date">24-10</span>
-            <span class="ae-agenda__name">Tunes 4 my boy</span>
-            <span class="ae-agenda__loc"><span aria-hidden="true">🇳🇱</span><span>Rotterdam</span></span>
-          </li>
-          <li class="ae-agenda__row">
+          <li class="ae-agenda__row" data-datum="2026-12-31">
             <span class="ae-agenda__date">31-12</span>
             <span class="ae-agenda__name">Oliebollen &amp; Bouncers</span>
             <span class="ae-agenda__loc"><span aria-hidden="true">🇳🇱</span><span>Rotterdam</span></span>
@@ -209,17 +316,27 @@
 
       <div class="agenda-paneel" id="paneel-geweest" role="tabpanel" aria-labelledby="tab-geweest" hidden>
         <ul class="ae-agenda__list">
-          <li class="ae-agenda__row">
+          <li class="ae-agenda__row" data-datum="2026-10-24">
+            <span class="ae-agenda__date">24-10</span>
+            <span class="ae-agenda__name">Tunes 4 my boy</span>
+            <span class="ae-agenda__loc"><span aria-hidden="true">🇳🇱</span><span>Rotterdam</span></span>
+          </li>
+          <li class="ae-agenda__row" data-datum="2026-10-17">
+            <span class="ae-agenda__date">17-10</span>
+            <span class="ae-agenda__name">Dubble Bubble Party &middot; B2B met piDJon</span>
+            <span class="ae-agenda__loc"><span aria-hidden="true">🇳🇱</span><span>Rotterdam</span></span>
+          </li>
+          <li class="ae-agenda__row" data-datum="2026-09-04">
             <span class="ae-agenda__date">04-09</span>
             <span class="ae-agenda__name">Gastset</span>
             <span class="ae-agenda__loc"><span aria-hidden="true">🇫🇷</span><span>Franse Ardennen</span></span>
           </li>
-          <li class="ae-agenda__row">
+          <li class="ae-agenda__row" data-datum="2026-08-15">
             <span class="ae-agenda__date">15-08</span>
             <span class="ae-agenda__name">TELLES B-DAY @ Caf&eacute; Soif</span>
             <span class="ae-agenda__loc"><span aria-hidden="true">🇳🇱</span><span>Rotterdam</span></span>
           </li>
-          <li class="ae-agenda__row">
+          <li class="ae-agenda__row" data-datum="2026-07-31">
             <span class="ae-agenda__date">31-07</span>
             <span class="ae-agenda__name">Pride Company Party</span>
             <span class="ae-agenda__loc"><span aria-hidden="true">🏳️‍🌈</span><span>Amsterdam</span></span>
@@ -229,37 +346,9 @@
     </div>
   </section>
 
-  <!-- FREQUENT COLLABORATORS -->
-  <section class="page-section" id="crew">
-    <div class="ae-heading">
-      <h2 class="ae-heading__title">Frequent collaborators</h2>
-      <span class="ae-heading__rule" aria-hidden="true"></span>
-    </div>
-    <!--
-      NIEUWE NAAM TOEVOEGEN: kopieer een <li>.
-      Met link: <a class="nb-item__link">, zonder link: <div class="nb-item__link">.
-    -->
-    <ul class="nb-list">
-      <li class="nb-item">
-        <div class="nb-item__link">
-          <span class="nb-item__meta">B2B</span>
-          <h3 class="nb-item__title">piDJon</h3>
-          <p class="nb-item__teaser">Café Soif &middot; Dubble Bubble Party</p>
-        </div>
-      </li>
-      <li class="nb-item">
-        <a class="nb-item__link" href="https://on.soundcloud.com/RV7y13WpXcThRy1Xry" target="_blank" rel="noopener">
-          <span class="nb-item__meta">SoundCloud</span>
-          <h3 class="nb-item__title">Zharath</h3>
-          <p class="nb-item__teaser">Album 00'verdose &middot; nieuw: Superstar</p>
-        </a>
-      </li>
-    </ul>
-  </section>
-
   <!-- LUISTER (Spotify) -->
   <section class="page-section" id="luister">
-    <div class="ae-heading">
+    <div class="ae-heading" data-label="Luister">
       <h2 class="ae-heading__title">Wat ik luister en draai</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
@@ -285,8 +374,8 @@
   </section>
 
   <!-- BANGERS VAN DE MAAND -->
-  <section class="page-section" id="bangers">
-    <div class="ae-heading">
+  <section class="page-section page-section--band" id="bangers">
+    <div class="ae-heading" data-label="Bangers">
       <h2 class="ae-heading__title">Bangers van de maand</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
@@ -296,13 +385,13 @@
     -->
     <ul class="nb-list">
       <li class="nb-item">
-        <a class="nb-item__link" href="https://open.spotify.com/track/2mPYczOWyVFR4iQO73PtnK" target="_blank" rel="noopener">
+        <a class="nb-item__link" href="https://open.spotify.com/track/2mPYczOWyVFR4iQO73PtnK" target="_blank" rel="noopener noreferrer">
           <span class="nb-item__meta">#02 &middot; september 2026</span>
           <h3 class="nb-item__title">Frequency &middot; Systematic Input</h3>
         </a>
       </li>
       <li class="nb-item">
-        <a class="nb-item__link" href="https://open.spotify.com/track/5fKil1HCUAk45V4ExBdMEV" target="_blank" rel="noopener">
+        <a class="nb-item__link" href="https://open.spotify.com/track/5fKil1HCUAk45V4ExBdMEV" target="_blank" rel="noopener noreferrer">
           <span class="nb-item__meta">#01 &middot; augustus 2026</span>
           <h3 class="nb-item__title">GIØ &middot; Sistem Error</h3>
         </a>
@@ -314,9 +403,50 @@
     </div>
   </section>
 
+  <!-- FREQUENT COLLABORATORS -->
+  <section class="page-section" id="crew">
+    <div class="ae-heading" data-label="Crew">
+      <h2 class="ae-heading__title">Frequent collaborators</h2>
+      <span class="ae-heading__rule" aria-hidden="true"></span>
+    </div>
+    <!--
+      NIEUWE NAAM TOEVOEGEN: kopieer een <li>.
+      Met link: <a class="nb-item__link">, zonder link: <div class="nb-item__link">.
+    -->
+    <ul class="nb-list">
+      <li class="nb-item">
+        <div class="nb-item__link">
+          <span class="nb-item__meta">B2B</span>
+          <h3 class="nb-item__title">piDJon</h3>
+          <p class="nb-item__teaser">Café Soif &middot; Dubble Bubble Party</p>
+        </div>
+      </li>
+      <li class="nb-item">
+        <a class="nb-item__link" href="https://on.soundcloud.com/RV7y13WpXcThRy1Xry" target="_blank" rel="noopener noreferrer">
+          <span class="nb-item__meta">SoundCloud</span>
+          <h3 class="nb-item__title">Zharath</h3>
+          <p class="nb-item__teaser">Album 00'verdose &middot; nieuw: Superstar</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ROTTERDAM -->
+  <section class="page-section page-section--band" id="rotterdam">
+    <div class="ae-heading" data-label="Rotterdam">
+      <h2 class="ae-heading__title">Rotterdam</h2>
+      <span class="ae-heading__rule" aria-hidden="true"></span>
+    </div>
+    <p class="muted">Based in Schiebroek maar flexibel vanwege het bezit van een gezinsauto en bakfiets. Ambassadeur van <a href="https://sjoelclubdelfshaven.nl/" target="_blank" rel="noopener noreferrer"><svg class="sjoel-icoon" viewBox="0 0 12 10" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="8" height="1" fill="#a0734a"/><rect x="0" y="1" width="12" height="1" fill="#a0734a"/><rect x="0" y="2" width="12" height="1" fill="#a0734a"/><rect x="0" y="3" width="3" height="1" fill="#a0734a"/><rect x="3" y="3" width="2" height="1" fill="#221d18"/><rect x="5" y="3" width="2" height="1" fill="#a0734a"/><rect x="7" y="3" width="2" height="1" fill="#221d18"/><rect x="9" y="3" width="3" height="1" fill="#a0734a"/><rect x="0" y="4" width="3" height="1" fill="#a0734a"/><rect x="3" y="4" width="2" height="1" fill="#221d18"/><rect x="5" y="4" width="2" height="1" fill="#a0734a"/><rect x="7" y="4" width="2" height="1" fill="#221d18"/><rect x="9" y="4" width="3" height="1" fill="#a0734a"/><rect x="0" y="5" width="12" height="1" fill="#a0734a"/><rect x="0" y="6" width="3" height="1" fill="#a0734a"/><rect x="3" y="6" width="6" height="1" fill="#221d18"/><rect x="9" y="6" width="3" height="1" fill="#a0734a"/><rect x="2" y="7" width="1" height="1" fill="#a0734a"/><rect x="3" y="7" width="2" height="1" fill="#221d18"/><rect x="5" y="7" width="2" height="1" fill="#efe4d3"/><rect x="7" y="7" width="2" height="1" fill="#221d18"/><rect x="9" y="7" width="1" height="1" fill="#a0734a"/><rect x="3" y="8" width="1" height="1" fill="#221d18"/><rect x="4" y="8" width="4" height="1" fill="#efe4d3"/><rect x="8" y="8" width="1" height="1" fill="#221d18"/><rect x="3" y="9" width="1" height="1" fill="#221d18"/><rect x="4" y="9" width="4" height="1" fill="#efe4d3"/><rect x="8" y="9" width="1" height="1" fill="#221d18"/></svg>Sjoelclub Delfshaven</a>.</p>
+    <blockquote class="ae-quote">
+      <p class="ae-quote__text">Rotterdam, Schiedam, Vlaardingen, Maassluis.<br>Hoekie om, trappie af, gekkenhuis.</p>
+      <cite class="ae-quote__source">Jules Deelder</cite>
+    </blockquote>
+  </section>
+
   <!-- FAQ: <details> zodat het ook zonder JavaScript werkt -->
   <section class="page-section" id="faq">
-    <div class="ae-heading">
+    <div class="ae-heading" data-label="FAQ">
       <h2 class="ae-heading__title">FAQ</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
@@ -334,7 +464,7 @@
 
       <details class="ae-faq__item">
         <summary class="ae-faq__q"><span>Waarom ben je zo laat begonnen? En wat zijn de implicaties voor je carrière?</span><span class="ae-faq__plus" aria-hidden="true"></span></summary>
-        <div class="ae-faq__a"><p>Was ik tien jaar eerder begonnen, dan waren er een hoop andere leuke dingen niet gebeurd. En had ik minder tijd gehad als consument een neus voor bangers te ontwikkelen. Als het gaat om implicaties voor carrière verwijs ik graag naar de schilder Henri Rousseau (1844-1910), bijgenaamd Le Douanier. Pas toen hij met pensioen was van zijn baan als douaneambtenaar begon hij serieus te schilderen. Zijn <a href="https://www.moma.org/collection/works/79277" target="_blank" rel="noopener">junglelandschappen</a> hangen nu in het MoMA.</p></div>
+        <div class="ae-faq__a"><p>Was ik tien jaar eerder begonnen, dan waren er een hoop andere leuke dingen niet gebeurd. En had ik minder tijd gehad als consument een neus voor bangers te ontwikkelen. Als het gaat om implicaties voor carrière verwijs ik graag naar de schilder Henri Rousseau (1844-1910), bijgenaamd Le Douanier. Pas toen hij met pensioen was van zijn baan als douaneambtenaar begon hij serieus te schilderen. Zijn <a href="https://www.moma.org/collection/works/79277" target="_blank" rel="noopener noreferrer">junglelandschappen</a> hangen nu in het MoMA.</p></div>
       </details>
 
       <details class="ae-faq__item">
@@ -351,8 +481,8 @@
   </section>
 
   <!-- BOEKEN -->
-  <section class="page-section" id="contact">
-    <div class="ae-heading">
+  <section class="page-section page-section--band" id="contact">
+    <div class="ae-heading" data-label="Boek">
       <h2 class="ae-heading__title">Boeken</h2>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
@@ -361,7 +491,7 @@
 
     <!-- MAILADRES AANPASSEN: verander alleen het adres achter "mailto:". -->
     <p class="actions">
-      <a class="ae-btn ae-btn--primary" href="mailto:hallo@late2theparty.nl?subject=Boeking%20all-electric&amp;body=Hoi%20Rik%2C%0A%0AIk%20wil%20je%20graag%20boeken.%20Alvast%20wat%20details%3A%0A%0ADatum%3A%20%0ALocatie%3A%20%0AType%20feest%3A%20%0AVerwachte%20tijd%2Fduur%3A%20%0ABudget%3A%20%0A%0AGroet%2C%0A" aria-label="Stuur een boekingsmail">Mail me</a>
+      <a class="ae-btn ae-btn--primary" href="mailto:hallo@late2theparty.nl?subject=Boeking%20DJ%20All-electric&amp;body=Hoi%20Rik%2C%0A%0AIk%20wil%20je%20graag%20boeken.%20Alvast%20wat%20details%3A%0A%0ADatum%3A%20%0ALocatie%3A%20%0AType%20feest%3A%20%0AVerwachte%20tijd%2Fduur%3A%20%0ABudget%3A%20%0A%0AGroet%2C%0A" aria-label="Stuur een boekingsmail">Mail me</a>
     </p>
   </section>
 
@@ -369,7 +499,7 @@
 
   <footer class="ae-footer">
     <div class="ae-footer__inner">
-      <span>&copy; all-electric, Rotterdam</span>
+      <span>&copy; DJ All-electric, Rotterdam</span>
       <ul class="ae-footer__links">
         <li><a href="nieuwsbrief/">Late 2 The Party</a></li>
         <li><a href="privacy/">Privacy</a></li>
@@ -377,6 +507,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

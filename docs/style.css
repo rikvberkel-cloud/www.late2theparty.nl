@@ -212,10 +212,6 @@ a.ae-pill:hover { background: var(--neon-yellow-a10); color: var(--neon-yellow);
   border-radius: var(--radius-md);
 }
 
-@media (min-width: 641px) {
-  .listen-card__play { display: none; }
-}
-
 .listen-card.is-loaded .listen-card__play { display: none; }
 
 /* ---------- FAQ met <details> ---------- */
@@ -376,3 +372,51 @@ a.nb-item__link:hover .nb-item__title { color: var(--neon-cyan); }
   margin-right: .35em;
   vertical-align: -.12em;
 }
+
+/* ---------- Homepage: type en ritme ---------- */
+/* Naam over de volle breedte van een bredere hero */
+.home .ae-hero__inner { max-width: 1080px; }
+.home .ae-hero__intro { font-size: var(--fs-quote); line-height: var(--lh-tight); }
+.hero-actions { margin: 0; }
+
+@media (min-width: 900px) {
+  .home .ae-hero__title {
+    white-space: nowrap;
+    font-size: clamp(84px, calc(10.87vw - 9px), 117px);
+  }
+}
+
+/* Genummerd label boven elke sectiekop, de teller loopt vanzelf mee */
+.home { counter-reset: sectie; }
+
+.home .page-section > .ae-heading::before {
+  counter-increment: sectie;
+  content: counter(sectie, decimal-leading-zero) " \00B7  " attr(data-label);
+  font-family: var(--font-mono);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-label);
+  line-height: 1;
+  letter-spacing: var(--ls-mono-wide);
+  text-transform: uppercase;
+  color: var(--neon-cyan);
+}
+
+/* Om en om een lichter vlak over de volle schermbreedte */
+.home .page-section,
+.home .page-section--media-end + .page-section {
+  padding-top: calc(var(--section-gap) * .6);
+  padding-bottom: calc(var(--section-gap) * .6);
+}
+
+.page-section--band {
+  background: var(--bg-alt);
+  box-shadow: 0 0 0 100vmax var(--bg-alt);
+  clip-path: inset(0 -100vmax);
+}
+
+.page-section--band .listen-card,
+.page-section--band .ae-quote,
+.page-section--band .ae-skill__root { background: var(--bg-panel-2); }
+
+/* ---------- 404 ---------- */
+.niet-gevonden { min-height: 60vh; }

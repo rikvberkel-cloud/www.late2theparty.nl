@@ -30,11 +30,39 @@
   }
 
   /* ------------------------------------------
+     2a. AGENDA OP DATUM
+     Elke rij heeft data-datum (JJJJ-MM-DD). Na die dag verhuist de rij
+     vanzelf van Komend naar Geweest, nieuwste bovenaan.
+     ------------------------------------------ */
+  var komendLijst = document.querySelector('#paneel-komend .ae-agenda__list');
+  var geweestLijst = document.querySelector('#paneel-geweest .ae-agenda__list');
+
+  if (komendLijst && geweestLijst) {
+    var nu = new Date();
+    var vandaag = nu.getFullYear() + '-' + ('0' + (nu.getMonth() + 1)).slice(-2) + '-' + ('0' + nu.getDate()).slice(-2);
+    var voorbij = Array.prototype.slice.call(komendLijst.querySelectorAll('.ae-agenda__row[data-datum]'))
+      .filter(function (rij) { return rij.getAttribute('data-datum') < vandaag; })
+      .sort(function (a, b) { return a.getAttribute('data-datum') < b.getAttribute('data-datum') ? -1 : 1; });
+
+    voorbij.forEach(function (rij) { geweestLijst.insertBefore(rij, geweestLijst.firstChild); });
+
+    if (!komendLijst.querySelector('.ae-agenda__row')) {
+      var leeg = document.createElement('li');
+      leeg.className = 'ae-agenda__row';
+      var tekst = document.createElement('span');
+      tekst.className = 'ae-agenda__name';
+      tekst.textContent = 'Nog niets gepland';
+      leeg.appendChild(tekst);
+      komendLijst.appendChild(leeg);
+    }
+  }
+
+  /* ------------------------------------------
      2. EERSTVOLGEND OPTREDEN IN DE HERO
      Eén bron: de bovenste rij onder Komend in de agenda.
      ------------------------------------------ */
   var heroNext = document.getElementById('heroNext');
-  var eerste = document.querySelector('#paneel-komend .ae-agenda__row');
+  var eerste = document.querySelector('#paneel-komend .ae-agenda__row[data-datum]');
 
   if (heroNext && eerste) {
     var datum = eerste.querySelector('.ae-agenda__date');
@@ -66,11 +94,7 @@
   var navLinks = document.querySelectorAll('.ae-nav__link[href^="#"]');
 
   if (navLinks.length && 'IntersectionObserver' in window) {
-    var spyTargets = [];
-    navLinks.forEach(function (link) {
-      var target = document.getElementById(link.getAttribute('href').slice(1));
-      if (target) spyTargets.push(target);
-    });
+    var spyTargets = document.querySelectorAll('main > section[id]');
 
     var spyObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -118,19 +142,19 @@
   });
 
   /* ------------------------------------------
-     5. SPOTIFY: desktop meteen, mobiel na tik
+     5. SPOTIFY: de speler laadt pas na een klik
+     Zo zet Spotify geen cookies voordat iemand een playlist aandrukt.
      ------------------------------------------ */
-  function mountSpotify(box, autoplay) {
+  function mountSpotify(box) {
     if (!box || box.classList.contains('is-loaded')) return;
     var src = box.getAttribute('data-spotify');
     if (!src) return;
-    if (autoplay) src += (src.indexOf('?') >= 0 ? '&' : '?') + 'autoplay=1';
+    src += (src.indexOf('?') >= 0 ? '&' : '?') + 'autoplay=1';
     var iframe = document.createElement('iframe');
     iframe.src = src;
     iframe.width = '100%';
     iframe.height = '152';
     iframe.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
-    iframe.setAttribute('loading', 'lazy');
     iframe.title = box.getAttribute('data-title') || 'Spotify';
     var knop = box.querySelector('.listen-card__play');
     if (knop) knop.remove();
@@ -138,24 +162,10 @@
     box.classList.add('is-loaded');
   }
 
-  var compact = window.matchMedia('(max-width: 640px)');
-
-  function wireSpotify() {
-    document.querySelectorAll('.listen-card[data-spotify]').forEach(function (box) {
-      if (!compact.matches) {
-        mountSpotify(box);
-        return;
-      }
-      var knop = box.querySelector('.listen-card__play');
-      if (knop && !knop.getAttribute('data-wired')) {
-        knop.setAttribute('data-wired', '1');
-        knop.addEventListener('click', function () { mountSpotify(box, true); });
-      }
-    });
-  }
-
-  wireSpotify();
-  if (compact.addEventListener) compact.addEventListener('change', wireSpotify);
+  document.querySelectorAll('.listen-card[data-spotify]').forEach(function (box) {
+    var knop = box.querySelector('.listen-card__play');
+    if (knop) knop.addEventListener('click', function () { mountSpotify(box); });
+  });
 
   /* ------------------------------------------
      6. INSCHRIJVEN
