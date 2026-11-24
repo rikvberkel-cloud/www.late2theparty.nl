@@ -2,20 +2,24 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; media-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
 
-  <title>Privacyverklaring · all-electric</title>
+  <title>Privacyverklaring · DJ All-electric</title>
   <meta name="description" content="Wat er met je gegevens gebeurt op late2theparty.nl en bij de nieuwsbrief Late 2 The Party.">
   <link rel="canonical" href="https://www.late2theparty.nl/privacy/">
   <meta name="robots" content="index, follow">
 
   <meta name="theme-color" content="#08080a">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Privacyverklaring · all-electric">
+  <meta name="twitter:title" content="Privacyverklaring · DJ All-electric">
   <meta name="twitter:description" content="Wat er met je gegevens gebeurt op late2theparty.nl en bij de nieuwsbrief.">
 
+  <link rel="preload" href="../fonts/archivo-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../all-electric.css">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -23,7 +27,7 @@
   <a class="skip-link ae-btn ae-btn--outline ae-btn--sm" href="#hoofdinhoud">Naar inhoud</a>
 
   <nav class="ae-nav ae-nav--sticky" aria-label="Hoofdmenu">
-    <a class="ae-nav__mark" href="../">all-electric</a>
+    <a class="ae-nav__mark" href="../">DJ All-electric</a>
     <ul class="ae-nav__links">
       <li><a class="ae-nav__link" href="../#over">Over</a></li>
       <li><a class="ae-nav__link" href="../nieuwsbrief/">Nieuwsbrief</a></li>
@@ -42,7 +46,7 @@
       <h1 class="ae-heading__title">Privacy</h1>
       <span class="ae-heading__rule" aria-hidden="true"></span>
     </div>
-    <p class="muted small">Laatst bijgewerkt op 30-08-2026</p>
+    <p class="muted small">Laatst bijgewerkt op 24-11-2026</p>
 
     <p class="lead">Dit is een hobbyproject van mij, Rik van Berkel uit Rotterdam. Geen bedrijf. Te bereiken via <a href="mailto:hallo@late2theparty.nl">hallo@late2theparty.nl</a>.</p>
 
@@ -67,12 +71,12 @@
 
   <footer class="ae-footer">
     <div class="ae-footer__inner">
-      <span>&copy; all-electric, Rotterdam</span>
+      <span>&copy; DJ All-electric, Rotterdam</span>
       <ul class="ae-footer__links">
         <li><a href="../nieuwsbrief/">Late 2 The Party</a></li>
       </ul>
     </div>
   </footer>
-  <script src="../main.js"></script>
+  <script src="../main.js" defer></script>
 </body>
 </html>
