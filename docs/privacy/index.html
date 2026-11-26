@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; media-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://l2tp.goatcounter.com; font-src 'self'; connect-src 'self' https://l2tp.goatcounter.com; frame-src 'none'; media-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,7 +35,7 @@
       <li><a class="ae-nav__link" href="../#luister">Luister</a></li>
       <li><a class="ae-nav__link" href="../#faq">FAQ</a></li>
     </ul>
-    <a class="ae-btn ae-btn--primary ae-btn--sm ae-nav__cta" href="../#contact">Boek</a>
+    <a class="ae-btn ae-btn--primary ae-btn--sm ae-nav__cta" data-goatcounter-click="boek-nav" href="../#contact">Boek</a>
   </nav>
 
   <main id="hoofdinhoud" tabindex="-1">
@@ -56,8 +56,8 @@
     <p>Onder elke brief staat een afmeldlink. Klik je die, dan is je adres weg.</p>
 
     <h2>De website</h2>
-    <p>Geen analytics, geen trackingpixels, geen advertenties. Ik houd niet bij wie langskomt.</p>
-    <p>Wat er wel gebeurt: de site staat op GitHub, en dat legt serverlogs vast met IP-adressen. Het lettertype staat op de site zelf (geen Google Fonts). Druk je een playlist aan, dan plaatst Spotify eigen cookies. Schrijf je in voor de nieuwsbrief, dan gaat je adres naar MailerLite; het aanmeldformulier kan een cookie zetten om te werken.</p>
+    <p>Ik tel bezoeken met GoatCounter, zonder cookies. Dat telt welke pagina je bekijkt, of je op Boek of op de boekingsmail klikt, van welke site je komt, je browser, je schermgrootte en je land. GoatCounter bewaart je IP-adres niet en volgt je niet over andere sites. Ik zie alleen totalen, niets dat bij jou als persoon hoort. Geen trackingpixels, geen advertenties.</p>
+    <p>Wat er verder gebeurt: de site staat op GitHub, en dat legt serverlogs vast met IP-adressen. Het lettertype staat op de site zelf (geen Google Fonts). Druk je een playlist aan, dan plaatst Spotify eigen cookies. Schrijf je in voor de nieuwsbrief, dan gaat je adres naar MailerLite; het aanmeldformulier kan een cookie zetten om te werken.</p>
 
     <h2>Mailen over een boeking</h2>
     <p>Die mail bewaar ik in mijn postbus zolang dat nuttig is. Dat loopt via Proton. Je adres komt niet op de nieuwsbrieflijst.</p>
@@ -78,5 +78,6 @@
     </div>
   </footer>
   <script src="../main.js" defer></script>
+  <script data-goatcounter="https://l2tp.goatcounter.com/count" async src="../goatcounter-count.js?v=2.7.0"></script>
 </body>
 </html>

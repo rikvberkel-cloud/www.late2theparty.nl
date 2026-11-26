@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; style-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://*.mailerlite.com https://*.mlcdn.com; font-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; connect-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; frame-src https://open.spotify.com https://*.mailerlite.com; media-src 'self'; form-action 'self' https://*.mailerlite.com; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; style-src 'self' 'unsafe-inline' https://*.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://*.mailerlite.com https://*.mlcdn.com https://l2tp.goatcounter.com; font-src 'self' https://*.mailerlite.com https://assets.mlcdn.com; connect-src 'self' https://*.mailerlite.com https://assets.mlcdn.com https://l2tp.goatcounter.com; frame-src https://open.spotify.com https://*.mailerlite.com; media-src 'self'; form-action 'self' https://*.mailerlite.com; base-uri 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -183,7 +183,7 @@
       <li><a class="ae-nav__link" href="#luister">Luister</a></li>
       <li><a class="ae-nav__link" href="#faq">FAQ</a></li>
     </ul>
-    <a class="ae-btn ae-btn--primary ae-btn--sm ae-nav__cta" href="#contact">Boek</a>
+    <a class="ae-btn ae-btn--primary ae-btn--sm ae-nav__cta" data-goatcounter-click="boek-nav" href="#contact">Boek</a>
   </nav>
 
   <main id="hoofdinhoud" tabindex="-1">
@@ -202,7 +202,7 @@
       </div>
 
       <p class="actions hero-actions">
-        <a class="ae-btn ae-btn--primary" href="#contact">Boek</a>
+        <a class="ae-btn ae-btn--primary" data-goatcounter-click="boek-hero" href="#contact">Boek</a>
         <a class="ae-btn ae-btn--outline" href="#aanmelden">Ontvang de nieuwsbrief</a>
       </p>
 
@@ -491,7 +491,7 @@
 
     <!-- MAILADRES AANPASSEN: verander alleen het adres achter "mailto:". -->
     <p class="actions">
-      <a class="ae-btn ae-btn--primary" href="mailto:hallo@late2theparty.nl?subject=Boeking%20DJ%20All-electric&amp;body=Hoi%20Rik%2C%0A%0AIk%20wil%20je%20graag%20boeken.%20Alvast%20wat%20details%3A%0A%0ADatum%3A%20%0ALocatie%3A%20%0AType%20feest%3A%20%0AVerwachte%20tijd%2Fduur%3A%20%0ABudget%3A%20%0A%0AGroet%2C%0A" aria-label="Stuur een boekingsmail">Mail me</a>
+      <a class="ae-btn ae-btn--primary" data-goatcounter-click="mail-me-boeken" href="mailto:hallo@late2theparty.nl?subject=Boeking%20DJ%20All-electric&amp;body=Hoi%20Rik%2C%0A%0AIk%20wil%20je%20graag%20boeken.%20Alvast%20wat%20details%3A%0A%0ADatum%3A%20%0ALocatie%3A%20%0AType%20feest%3A%20%0AVerwachte%20tijd%2Fduur%3A%20%0ABudget%3A%20%0A%0AGroet%2C%0A" aria-label="Stuur een boekingsmail">Mail me</a>
     </p>
   </section>
 
@@ -508,5 +508,6 @@
   </footer>
 
   <script src="main.js" defer></script>
+  <script data-goatcounter="https://l2tp.goatcounter.com/count" async src="goatcounter-count.js?v=2.7.0"></script>
 </body>
 </html>
